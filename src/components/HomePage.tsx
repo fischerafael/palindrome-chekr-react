@@ -11,7 +11,7 @@ export const HomePage = () => {
   const [isPalindrome, setPalindrome] = useState(false);
 
   const verifyPalindrome = (input: string) => {
-    const sanitizedString = input.trim();
+    const sanitizedString = input.trim().toLowerCase();
     if (!sanitizedString) return setPalindrome(false);
     const reversedInput = sanitizedString.split("").reverse().join("");
     if (reversedInput === sanitizedString) return setPalindrome(true);
